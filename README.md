@@ -66,4 +66,4 @@ Feel free to fork and contribute improvements. Ensure changes maintain the vanil
 License
 This project is for demonstration purposes. No specific license applied.
 
-For questions or issues, contact via the website's contact form or email: info@fakirventures.com.
+For questions or issues, contact via the website's contact form or email: fakirventures@gmail.com

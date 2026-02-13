@@ -652,6 +652,80 @@ main {
   border-color: #fff;
 }
 
+.legal-doc-card {
+  margin-top: 1.3rem;
+  padding: 1.2rem;
+  background: linear-gradient(145deg, rgba(18, 38, 65, 0.88), rgba(13, 28, 49, 0.95));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+}
+
+.legal-doc-card h3 {
+  margin: 0 0 0.55rem;
+}
+
+.legal-doc-tagline {
+  margin: 0 0 0.85rem;
+  color: #e0eeff;
+  font-weight: 600;
+}
+
+.legal-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.legal-item,
+.legal-magic,
+.legal-why {
+  border: 1px solid rgba(174, 204, 235, 0.25);
+  border-radius: 12px;
+  background: rgba(12, 26, 44, 0.6);
+  padding: 0.9rem;
+}
+
+.legal-item h4,
+.legal-magic h4,
+.legal-why h4 {
+  margin: 0 0 0.55rem;
+  line-height: 1.35;
+}
+
+.legal-item p,
+.legal-magic p {
+  margin: 0.45rem 0;
+  color: var(--text-300);
+}
+
+.legal-equation {
+  margin: 0.5rem 0;
+  padding: 0.58rem 0.72rem;
+  border-radius: 10px;
+  border: 1px dashed rgba(181, 209, 240, 0.45);
+  background: rgba(9, 20, 34, 0.72);
+  color: #d9ebff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92rem;
+}
+
+.legal-magic,
+.legal-why {
+  margin-top: 0.9rem;
+}
+
+.legal-why ol {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-300);
+}
+
+.legal-why li + li {
+  margin-top: 0.45rem;
+}
+
 .partners-grid {
   margin-top: 1.2rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -869,6 +943,10 @@ main {
   .partners-grid,
   .sectors-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .legal-doc-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-sector-grid {

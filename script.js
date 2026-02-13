@@ -1,6 +1,15 @@
 "use strict";
 
-const ROUTES = ["home", "about", "companies", "sectors", "investors", "contact"];
+const ROUTES = ["home", "about", "companies", "sectors", "education-legal", "investors", "contact"];
+const PAGE_TITLES = {
+  home: "Fakir Ventures | Web3 & AI Venture Studio",
+  about: "About | Fakir Ventures",
+  companies: "Child Companies | Fakir Ventures",
+  sectors: "Sectors | Fakir Ventures",
+  "education-legal": "Education Legal Documents | Fakir Ventures",
+  investors: "Investors & Partners | Fakir Ventures",
+  contact: "Contact | Fakir Ventures"
+};
 
 const BLUEPRINT = [
   {
@@ -170,6 +179,10 @@ function updateNav() {
   DOM.routeLinks.forEach((link) => link.classList.toggle("active", link.dataset.routeLink === state.route));
 }
 
+function updateDocumentTitle() {
+  document.title = PAGE_TITLES[state.route] || PAGE_TITLES.home;
+}
+
 function setRoute(route, shouldScroll = true) {
   state.route = ROUTES.includes(route) ? route : "home";
   DOM.sections.forEach((section) => {
@@ -178,6 +191,7 @@ function setRoute(route, shouldScroll = true) {
     section.setAttribute("aria-hidden", String(!active));
   });
   updateNav();
+  updateDocumentTitle();
   if (state.route === "companies") renderCompanies();
   if (shouldScroll) window.scrollTo({ top: 0, behavior: "smooth" });
   observeReveals();

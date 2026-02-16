@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Management | Fakir Ventures</title>
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body data-page="account">
+    <main class="page-shell">
+      <div class="top-bar">
+        <a class="brand-link" href="/index.html#home">Fakir Ventures</a>
+        <div class="inline-row">
+          <a class="ghost-link" href="/html/login.html">Login</a>
+          <button id="logout-btn" class="btn btn-secondary" type="button">Logout</button>
+        </div>
+      </div>
+
+      <section class="account-panels">
+        <article class="auth-card">
+          <h1>Account Overview</h1>
+          <p>Signed in as <strong id="account-username">...</strong></p>
+          <p class="field-note">Your account data is persisted in Firebase Firestore.</p>
+        </article>
+
+        <article class="auth-card">
+          <h2>Update Profile</h2>
+          <form id="profile-form" class="auth-form" novalidate>
+            <label for="profile-username">Username</label>
+            <input id="profile-username" name="username" type="text" autocomplete="username" required />
+            <button class="btn btn-primary" type="submit">Save Changes</button>
+          </form>
+        </article>
+
+        <article class="auth-card">
+          <h2>Change Password</h2>
+          <form id="password-form" class="auth-form" novalidate>
+            <label for="currentPassword">Current Password</label>
+            <input
+              id="currentPassword"
+              name="currentPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+
+            <label for="newPassword">New Password</label>
+            <input id="newPassword" name="newPassword" type="password" autocomplete="new-password" required />
+
+            <label for="confirmPassword">Confirm New Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required />
+
+            <button class="btn btn-primary" type="submit">Update Password</button>
+          </form>
+        </article>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="../js/auth-pages.js" defer></script>
+  </body>
+</html>

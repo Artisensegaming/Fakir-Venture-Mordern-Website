@@ -306,6 +306,36 @@ main {
   box-shadow: var(--shadow-deep);
 }
 
+.hero-account-link {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.36rem;
+  text-decoration: none;
+  color: #e7f2ff;
+  background: rgba(7, 18, 33, 0.72);
+  border: 1px solid rgba(173, 205, 241, 0.4);
+  border-radius: 999px;
+  padding: 0.4rem 0.62rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-account-link:hover,
+.hero-account-link:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(122, 164, 213, 0.24);
+  border-color: #dcecff;
+}
+
+.hero-account-link span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .hero-visual::before {
   content: "";
   position: absolute;
@@ -993,6 +1023,10 @@ main {
   }
 
   .brand-copy span {
+    display: none;
+  }
+
+  .hero-account-link span {
     display: none;
   }
 }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Fakir Ventures</title>
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body data-page="register">
+    <main class="page-shell">
+      <div class="top-bar">
+        <a class="brand-link" href="/index.html#home">Fakir Ventures</a>
+        <a class="ghost-link" href="./login.html">Have an account? Log In</a>
+      </div>
+
+      <section class="auth-grid">
+        <article class="auth-card">
+          <h1>Create your account</h1>
+          <p>Register with a unique username and secure password.</p>
+
+          <form id="register-form" class="auth-form" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" required />
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              autocomplete="new-password"
+              required
+            />
+
+            <button class="btn btn-primary" type="submit">Register</button>
+            <p id="status" class="status" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="info-card">
+          <h2>Account benefits</h2>
+          <ul>
+            <li>Update your profile in one place</li>
+            <li>Change your password securely</li>
+            <li>Stay signed in with session support</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="../js/auth-pages.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Fakir Ventures</title>
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body data-page="login">
+    <main class="page-shell">
+      <div class="top-bar">
+        <a class="brand-link" href="/index.html#home">Fakir Ventures</a>
+        <a class="ghost-link" href="/html/register.html">Create Account</a>
+      </div>
+
+      <section class="auth-grid">
+        <article class="auth-card">
+          <h1>Log in to your account</h1>
+          <p>Use your Fakir Ventures credentials to access account management.</p>
+
+          <form id="login-form" class="auth-form" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+            <button class="btn btn-primary" type="submit">Log In</button>
+            <p id="status" class="status" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="info-card">
+          <h2>New here?</h2>
+          <p>Create an account to manage profile settings and password securely.</p>
+          <p><a class="ghost-link" href="/html/register.html">Go to registration</a></p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../js/auth-pages.js" defer></script>
+  </body>
+</html>
